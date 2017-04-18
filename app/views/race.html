@@ -1,0 +1,38 @@
+<div class="u-crumbs">
+    <ul>
+        <li>
+            <a href="#/championships">Championships</a>
+        </li>
+        <li>
+            <a ng-href="#/championships/{{Race.championship.id}}">{{Race.championship.name}}</a>
+        </li>
+        <li>
+            <a ng-href="#/championships/{{Race.championship.id}}/races">Races</a>
+        </li>
+        <li>
+            <a ng-href="#/championships/{{Race.championship.id}}/races/{{Race.race.number}}">Race {{Race.race.number}}</a>
+        </li>
+    </ul>
+</div>
+<h3>Race Details</h3>
+<p>Championship:  Round {{Race.race.number}}</p>
+<p>Date: {{Race.race.date}}</p>
+<p>Track: {{Race.race.track.name}}</p>
+
+<div ng-show="Race.race">
+    <h3>Race Result:</h3>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th class="col-xs-2">Position</th>
+                <th class="col-xs-4">Driver</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="d in Race.race.results" ng-click="Race.onDriverClick(d)">
+                <td class="col-xs-2">{{$index + 1}}</td>
+                <td class="col-xs-4">{{d.name}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

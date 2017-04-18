@@ -1,0 +1,29 @@
+<div class="u-crumbs">
+    <ul>
+        <li>
+            <a href="#/championships">Championships</a>
+        </li>
+        <li>
+            <a ng-href="#/championships/{{Championship.championship.id}}">{{Championship.championship.name}}</a>
+        </li>
+    </ul>
+</div>
+<h1>{{Championship.championship.name}}</h1>
+<button class="btn btn-default" type="button" ng-click="Championship.onCalendarClick()">View Race Calendar</button>
+<h3>Leaderboard</h3>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th class="col-xs-2">Position</th>
+            <th class="col-xs-4">Driver</th>
+            <th class="col-xs-2">Points</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="entrant in Championship.championship.driverLeaderboard.entrants" ng-click="Championship.onDriverClick(entrant)">
+            <td class="col-xs-2">{{entrant.position}}</td>
+            <td class="col-xs-4">{{entrant.entrant.name}}</td>
+            <td class="col-xs-2">{{entrant.points}}</td>
+        </tr>
+    </tbody>
+</table>

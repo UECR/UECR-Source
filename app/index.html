@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>UECR</title>
+        <meta name="description" content="Ultimate Endurance Championship Racing">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css(.) styles/vendor.css -->
+        <!-- bower:css -->
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+    </head>
+    <body ng-app="uecr">
+        <!--[if lte IE 8]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="u-root">
+            <header class="u-header" role="banner">
+                <div class="u-wrapper">
+                    <div class="u-logo">
+                        <a href="#/"><strong>UECR</strong></a>
+                    </div>
+                    <nav class="u-links" ng-controller="Navigation as nav">
+                        <ul>
+                            <li ng-class="{active: nav.active('/championships')}">
+                                <a href="#/championships">Championships</a>
+                            </li>
+                            <li ng-class="{active: nav.active('/drivers')}">
+                                <a href="#/drivers">Drivers</a>
+                            </li>
+                            <li ng-class="{active: nav.active('/teams')}">
+                                <a href="#/teams">Teams</a>
+                            </li>
+                            <li ng-class="{active: nav.active('/hall-of-fame')}">
+                                <a href="#/hall-of-fame">Hall Of Fame</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <section class="u-wrapper">
+                <section class="u-main-content">
+                    <div ng-view=""></div>
+                </section>
+            </section>
+        </div>
+        
+        <!--<div class="wrapper">
+            <div class="header">
+                <div class="navbar navbar-default" role="navigation">
+                    <div class="container">
+                        <navigation app-name="UECR"></navigation>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="page-content">
+                <div ng-view=""></div>
+            </div>
+        </div>-->
+
+        <!-- build:js(.) scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/angular-touch/angular-touch.js"></script>
+        <script src="bower_components/angular-aria/angular-aria.js"></script>
+        <script src="bower_components/angular-messages/angular-messages.js"></script>
+        <script src="bower_components/angular-material/angular-material.js"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/data/platforms.js"></script>
+        <script src="scripts/data/games.js"></script>
+        <script src="scripts/data/tracks.js"></script>
+        <script src="scripts/data/races.js"></script>
+        <script src="scripts/data/points.js"></script>
+        <script src="scripts/data/drivers.js"></script>
+        <script src="scripts/data/teams.js"></script>
+        <script src="scripts/data/championships.js"></script>
+        <script src="scripts/data/leaderboards.js"></script>
+        <script src="scripts/data/helper.js"></script>
+        <script src="scripts/directives/navigation.js"></script>
+        <script src="scripts/controllers/navigation.js"></script>
+        <script src="scripts/controllers/home.js"></script>
+        <script src="scripts/controllers/championships.js"></script>
+        <script src="scripts/controllers/championship.js"></script>
+        <script src="scripts/controllers/races.js"></script>
+        <script src="scripts/controllers/race.js"></script>
+        <script src="scripts/controllers/drivers.js"></script>
+        <script src="scripts/controllers/driver.js"></script>
+        <script src="scripts/controllers/hall-of-fame.js"></script>
+        <script src="scripts/controllers/about.js"></script>
+        <!-- endbuild -->
+    </body>
+</html>
