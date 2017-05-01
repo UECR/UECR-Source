@@ -1,7 +1,7 @@
 <div class="u-crumbs">
     <ul>
         <li>
-            <a href="#/drivers">Drivers</a>
+            <a href="#/teams">Teams</a>
         </li>
     </ul>
 </div>
@@ -10,13 +10,11 @@
         <thead>
             <tr>
                 <th class="col-xs-4">Name</th>
-                <th class="col-xs-4">No. of championships</th>
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="d in Drivers.list" ng-click="Drivers.onClick(d)">
-                <td class="col-xs-4">{{d.name}}</td>
-                <td class="col-xs-4">{{d.championships.length}}</td>
+            <tr ng-repeat="t in Teams.list" ng-click="Teams.onClick(t)">
+                <td class="col-xs-4">{{t.name}}</td>
             </tr>
         </tbody>
     </table>

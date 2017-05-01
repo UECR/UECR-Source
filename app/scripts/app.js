@@ -51,6 +51,11 @@
                 controller: 'DriverCtrl',
                 controllerAs: 'Driver'
             })
+            .when('/teams', {
+                templateUrl: 'views/teams.html',
+                controller: 'TeamsCtrl',
+                controllerAs: 'Teams'
+            })
             .when('/hall-of-fame', {
                 templateUrl: 'views/hall-of-fame.html',
                 controller: 'HofCtrl',

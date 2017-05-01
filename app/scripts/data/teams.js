@@ -10,11 +10,11 @@
         var teamList = [
             {
                 id: 1,
-                name: 'Team1'
+                name: 'UECR A'
             },
             {
                 id: 2,
-                name: 'Team2'
+                name: 'UECR B'
             }
         ];
 
