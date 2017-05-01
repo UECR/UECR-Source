@@ -1,0 +1,34 @@
+<div class="u-crumbs">
+    <ul>
+        <li>
+            <a href="#/drivers">Drivers</a>
+        </li>
+        <li>
+            <a ng-href="#/drivers/{{Driver.driver.id}}">{{Driver.driver.name}}</a>
+        </li>
+    </ul>
+</div>
+<h2>Profile: {{Driver.driver.name}}</h2>
+<p>Races: {{Driver.stats.races}}</p>
+<p>Podiums: {{Driver.stats.podiums}}</p>
+<p>Wins: {{Driver.stats.wins}}</p>
+<p>Points: {{Driver.stats.points}}</p>
+<h1>Championships:</h1>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th class="col-xs-4">Name</th>
+            <th class="col-xs-2">Position</th>
+            <th class="col-xs-2">Points</th>
+            <th class="col-xs-2">State</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="c in Driver.championships" ng-click="Driver.onClick(c)">
+            <td class="col-xs-4">{{c.name}}</td>
+            <td class="col-xs-2">{{c.position}}</td>
+            <td class="col-xs-2">{{c.points}}</td>
+            <td class="col-xs-2">{{c.state}}</td>
+        </tr>
+    </tbody>
+</table>

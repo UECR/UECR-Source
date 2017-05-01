@@ -1,0 +1,25 @@
+<div class="u-crumbs">
+    <ul>
+        <li>
+            <a href="#/championships">Championships</a>
+        </li>
+    </ul>
+</div>
+<div class="panel panel-default">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th class="col-xs-4">Championship Name</th>
+                <th class="col-xs-3">State</th>
+                <th class="col-xs-2">Race Day</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="c in Championships.list" ng-click="Championships.onClick(c)">
+                <td class="col-xs-4">{{c.name}}</td>
+                <td class="col-xs-3"><span class="glyphicon glyphicon-stop" ng-class="{'state-active': c.getState() == 'Active'}"></span>&nbsp;{{c.getState()}}</td>
+                <td class="col-xs-2">Sunday</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
